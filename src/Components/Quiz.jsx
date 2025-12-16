@@ -1,16 +1,24 @@
-import React from 'react';
-function quiz ({ questions, currentQuestionIndex, setCurrentQuestionIndex, setUserAnswers, setQuizState }) 
+import React, { use } from 'react';
+function Quiz ({ questions, currentQuestionIndex, setCurrentQuestionIndex, setUserAnswers, setQuizState }) {
 
 const currentQuestion = questions[currentQuestionIndex];
 
+function handleAnswerClick (selectedOption) {
+    setUserAnswers([...userAnswers, selectedOption]);
+    if (currentQuestionIndex === questions.length - 1) {
+        setQuizState('results');
+    } else {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+}
 return (
     <div className="quiz">
         <h2>Question {currentQuestionIndex + 1}: {currentQuestion.question}</h2>
 
 <div className='answer-section'>
 {currentQuestion.options.map((option) => (
-    <button key={option}>{option}</button>
+    <button key={option} onClick={() => handleAnswerClick(option)}>{option}</button>
 ))}
 </div>
     </div>
-)
+)}
