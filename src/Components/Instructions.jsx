@@ -11,4 +11,4 @@ function Instructions ({ onStart }) {
     )
 }
 
-export default instructions;
+export default Instructions;

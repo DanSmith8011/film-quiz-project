@@ -1,9 +1,9 @@
 import { questions, shuffleArray } from './data/questions';
 import { useState } from 'react'; 
 import './App.css';
-import Quiz from './components/Quiz';
-import Results from './components/Results';
-import Instructions from './components/Instructions';
+import Quiz from './Components/Quiz';
+import Results from './Components/Results';
+import Instructions from './Components/Instructions';
 
 function App() {
     
@@ -12,16 +12,14 @@ function App() {
     const [quizState, setQuizState] = useState('instructions'); 
     const [userAnswers, setUserAnswers] = useState([]);
     
-    
+    const handleStartQuiz = () => {
+      setQuizState('inProgress')
+    };
     const screenToDisplay = () => {
         switch(quizState) {
           case 'instructions':
             return (
-              <div className="instructions">
-                <h1>Welcome to the Film Quiz!</h1>
-                <p>Test your knowledge about films with this fun quiz. Click the button below to start!</p>
-                <button onClick={() => setQuizState('inProgress')}>Start Quiz</button>
-              </div>
+              <Instructions onStart={handleStartQuiz} />
             );
           
           case 'inProgress':
@@ -32,6 +30,7 @@ function App() {
                 setCurrentQuestionIndex={setCurrentQuestionIndex}
                 setUserAnswers={setUserAnswers}
                 setQuizState={setQuizState}
+                userAnswers={userAnswers} 
               /> 
             );
             

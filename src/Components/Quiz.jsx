@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-function Quiz ({ questions, currentQuestionIndex, setCurrentQuestionIndex, setUserAnswers, setQuizState }) {
+function Quiz ({ questions, currentQuestionIndex, setCurrentQuestionIndex, setUserAnswers, setQuizState, userAnswers }) {
 
 const currentQuestion = questions[currentQuestionIndex];
 
@@ -22,3 +22,5 @@ return (
 </div>
     </div>
 )}
+
+export default Quiz;
