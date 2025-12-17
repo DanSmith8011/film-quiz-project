@@ -1,3 +1,10 @@
+
+/**
+ * Quiz Questions Data
+ * 
+ * Contains all film quiz questions with multiple choice options
+ * Each question has: id, question text, options array, correct answer, and explanation
+ */
 export const questions = [
     {
         id: 1,
@@ -73,7 +80,13 @@ export const questions = [
 ];
 
 
-
+/**
+ * Shuffles an array randomly using Fisher-Yates algorithm
+ * Used to randomize question order for each quiz attempt
+ * 
+ * @param {Array} array - The array to shuffle
+ * @returns {Array} - New shuffled array
+ */
 
 export const shuffleArray = (array) => {
     const shuffled = [...array];    
@@ -84,3 +97,5 @@ export const shuffleArray = (array) => {
     return shuffled;
 }
 export default questions;
+
+
