@@ -1,4 +1,13 @@
 
+import React from 'react';
+
+/**
+ * Instructions Component
+ * Responsibilities:
+ * - Displays quiz instructions
+ * - Provides a button to start the quiz    
+ * @param {Function} onStart - Function to start the quiz
+ */
 
 function Instructions ({ onStart }) {
     return ( 
