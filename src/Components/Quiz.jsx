@@ -36,6 +36,13 @@ function handleAnswerClick (selectedOption) {
     }
 }
 
+function previousQuestion () {
+    if (currentQuestionIndex > 0) {
+        setCurrentQuestionIndex(currentQuestionIndex - 1);
+        setUserAnswers(userAnswers.slice(0, -1));
+    }
+} 
+
 return (
     <div className="quiz">
         <h2>Question {currentQuestionIndex + 1}: {currentQuestion.question}</h2>
