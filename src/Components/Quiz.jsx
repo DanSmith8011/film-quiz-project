@@ -35,15 +35,18 @@ function handleAnswerClick (selectedOption) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
 }
+
 return (
     <div className="quiz">
         <h2>Question {currentQuestionIndex + 1}: {currentQuestion.question}</h2>
 
-<div className='answer-section'>
-{currentQuestion.options.map((option) => (
-    <button key={option} onClick={() => handleAnswerClick(option)}>{option}</button>
-))}
-</div>
+       <p> Question {currentQuestionIndex + 1} of {questions.length}</p>
+
+        <div className='answer-section'>
+            {currentQuestion.options.map((option) => (
+                <button key={option} onClick={() => handleAnswerClick(option)}>{option}</button>
+            ))}
+        </div>
     </div>
 )}
 

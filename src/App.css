@@ -92,3 +92,9 @@ p {
     font-size: 1rem;
   }
 }
+
+.quiz p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #f39c12;
+}
