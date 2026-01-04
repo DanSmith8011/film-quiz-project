@@ -101,13 +101,13 @@ This project is deployed using GitHub Pages.
 ## Screenshots
 
 ### Instructions Screen
+![Instructions Screen](./screenshots/instructions.png)
+*Welcome screen with quiz instructions and start button*
 
-Instructions screenshot.png
-
-### Quiz Screen
-
-Quiz screenshot.png
+### Quiz Screen  
+![Quiz Screen](./screenshots/quiz.png)
+*Multiple choice questions with answer options*
 
 ### Results Screen
-
-Results screenshot.png
+![Results Screen](./screenshots/results.png)
+*Final score display with option to retake quiz*

@@ -40,6 +40,8 @@ function previousQuestion () {
     if (currentQuestionIndex > 0) {
         setCurrentQuestionIndex(currentQuestionIndex - 1);
         setUserAnswers(userAnswers.slice(0, -1));
+    } if (currentQuestionIndex === 0) {
+        return;
     }
 } 
 
