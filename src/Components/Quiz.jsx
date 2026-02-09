@@ -36,20 +36,11 @@ function handleAnswerClick (selectedOption) {
     }
 }
 
-function previousQuestion () {
-    if (currentQuestionIndex > 0) {
-        setCurrentQuestionIndex(currentQuestionIndex - 1);
-        setUserAnswers(userAnswers.slice(0, -1));
-    } if (currentQuestionIndex === 0) {
-        return;
-    }
-} 
-
 return (
     <div className="quiz">
         <h2>Question {currentQuestionIndex + 1}: {currentQuestion.question}</h2>
 
-       <p> Question {currentQuestionIndex + 1} of {questions.length}</p>
+         <p> Question {currentQuestionIndex + 1} of {questions.length}</p>
 
         <div className='answer-section'>
             {currentQuestion.options.map((option) => (

@@ -111,3 +111,13 @@ This project is deployed using GitHub Pages.
 ### Results Screen
 ![Results Screen](./screenshots/results.png)
 *Final score display with option to retake quiz*
+
+## About This Project
+
+This project was created as part of my web development course to demonstrate proficiency in:
+- Building interactive web applications
+- Implementing responsive design principles
+- Managing state and component architecture
+- Following industry-standard development practices including version control and code validation
+
+The project helped me develop practical skills in modern JavaScript frameworks and professional development workflows.

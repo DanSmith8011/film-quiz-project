@@ -60,7 +60,9 @@ function App() {
               <Results 
                 questions={shuffledQuestions} 
                 userAnswers={userAnswers}
-                setQuizState={setQuizState} 
+                setQuizState={setQuizState}
+                setUserAnswers={setUserAnswers}
+                setCurrentQuestionIndex={setCurrentQuestionIndex} 
               />
             );
             
